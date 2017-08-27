@@ -22,6 +22,7 @@ public class BlankFragment extends Fragment {
 
     public static BlankFragment newInstance(String text){
 
+
         Bundle args = new Bundle();
         args.putString("text",text);
         BlankFragment fragment = new BlankFragment();
