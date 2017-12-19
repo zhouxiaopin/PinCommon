@@ -1,8 +1,11 @@
-package com.gzticc.pincommon;
+package com.gzticc.pincommon.ui.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.gzticc.pincommon.ui.fragment.FragmentFactory;
+import com.gzticc.pincommon.utils.LogUtils;
 
 import java.util.List;
 
@@ -21,7 +24,9 @@ public class MyAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return BlankFragment.newInstance(list.get(position));
+//        return BlankFragment.newInstance(list.get(position));
+        LogUtils.e("getItem----------"+position);
+        return FragmentFactory.createFragment(position);
     }
 
     @Override

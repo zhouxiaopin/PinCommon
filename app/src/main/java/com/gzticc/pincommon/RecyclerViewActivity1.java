@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.gzticc.pincommon.adapter.RecyclerViewAdapter1;
+import com.gzticc.pincommon.ui.adapter.RecyclerViewAdapter1;
 
 import java.util.ArrayList;
 import java.util.List;
