@@ -103,9 +103,13 @@ public class UIUtils {
     public static String getString(int id) {
         return getContext().getResources().getString(id);
     }
-    // 获取字符串
+    // 获取Drawable
     public static Drawable getDrawable(int id) {
         return getContext().getResources().getDrawable(id);
+    }
+    // 获取颜色
+    public static int getColor(int id) {
+        return getContext().getResources().getColor(id);
     }
 
 }

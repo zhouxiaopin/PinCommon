@@ -1,6 +1,6 @@
 package com.gzticc.pincommon.ui.fragment;
 
-import android.support.v4.app.Fragment;
+import com.gzticc.pincommon.base.BaseFragment;
 
 import java.util.HashMap;
 
@@ -11,10 +11,10 @@ import java.util.HashMap;
  */
 
 public class FragmentFactory {
-    private static HashMap<Integer, Fragment> mFragmentMap = new HashMap<Integer, Fragment>();
-    public static Fragment createFragment(int pos) {
+    private static HashMap<Integer, BaseFragment> mFragmentMap = new HashMap<>();
+    public static BaseFragment createFragment(int pos) {
         // 先从集合中取, 如果没有,才创建对象, 提高性能
-        Fragment fragment = mFragmentMap.get(pos);
+        BaseFragment fragment = mFragmentMap.get(pos);
 
         if (fragment == null) {
             switch (pos) {
