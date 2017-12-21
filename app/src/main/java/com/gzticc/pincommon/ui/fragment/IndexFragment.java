@@ -1,13 +1,27 @@
 package com.gzticc.pincommon.ui.fragment;
 
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
 import com.gzticc.pincommon.R;
 import com.gzticc.pincommon.base.BaseFragment;
+import com.gzticc.pincommon.ui.activity.GlideActivity;
+import com.gzticc.pincommon.ui.adapter.IndexLvAdapter;
 import com.gzticc.pincommon.utils.LogUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
 
 /**
  * 首页
  */
-public class IndexFragment extends BaseFragment {
+public class IndexFragment extends BaseFragment implements AdapterView.OnItemClickListener {
+    @Bind(R.id.lvMenu)
+    ListView lvMenu;
+    private IndexLvAdapter indexLvAdapter;
     public IndexFragment() {
         LogUtils.d("new IndexFragment");
     }
@@ -27,8 +41,29 @@ public class IndexFragment extends BaseFragment {
     }
 
     @Override
-    protected void initData() {
-
+    protected void initEvent() {
+        lvMenu.setOnItemClickListener(this);
     }
 
+    @Override
+    protected void initData() {
+        List<String> menuData = new ArrayList<>();
+        menuData.add("glide");
+        menuData.add("2");
+        menuData.add("3");
+        indexLvAdapter = new IndexLvAdapter(menuData,mActivity);
+        lvMenu.setAdapter(indexLvAdapter);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        switch (position){
+            case 0:
+//                UIUtils.showToast("glide",0);
+                openActivity(GlideActivity.class);
+            break;
+            default:
+                break;
+        }
+    }
 }

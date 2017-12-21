@@ -48,6 +48,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Bind(R.id.navigationView)
     NavigationView navigationView;
 
+
     private TabLayout.Tab one;
     private TabLayout.Tab two;
     private TabLayout.Tab three;
@@ -60,11 +61,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        initData();
         initEvent();
 
         title.setText("学习");
 
 //        channelInfo();
+    }
+
+    private void initData() {
+
     }
 
     private void initEvent() {

@@ -2,6 +2,7 @@ package com.gzticc.pincommon.base;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -52,6 +53,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        initEvent();
         initData();
     }
 
@@ -59,6 +61,30 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    protected void openActivity(Class<?> clazz){
+        Intent intent = new Intent(mActivity,clazz);
+        startActivity(intent);
+
+    }
+    protected void openActivity(Class<?> clazz, Bundle bundle){
+        Intent intent = new Intent(mActivity,clazz);
+        if(null != bundle){
+            intent.putExtras(bundle);
+        }
+        startActivity(intent);
+    }
+    protected void openActivityForResult(Class<?> clazz, int requesCode){
+        Intent intent = new Intent(mActivity,clazz);
+        startActivityForResult(intent,requesCode);
+    }
+    protected void openActivityForResult(Class<?> clazz, int requesCode, Bundle bundle){
+        Intent intent = new Intent(mActivity,clazz);
+        if(null != bundle){
+            intent.putExtras(bundle);
+        }
+        startActivityForResult(intent,requesCode);
     }
 
     /**
@@ -72,11 +98,16 @@ public abstract class BaseFragment extends Fragment {
      * @param view
      * @param savedInstanceState
      */
-    protected void initView(View view, Bundle savedInstanceState){};
+    protected void initView(View view, Bundle savedInstanceState){}
 
     /**
      * 执行数据的加载
      */
     protected abstract void initData();
+
+    /**
+     * 初始化Event
+     */
+    protected void initEvent(){}
 
 }
