@@ -69,6 +69,6 @@ public class GlideActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        GlideImageLoader.clearImageAllCache(this);
+//        BannerImgLoader.clearImageAllCache(this);
     }
 }

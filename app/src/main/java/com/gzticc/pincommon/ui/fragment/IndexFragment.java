@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 import com.gzticc.pincommon.R;
 import com.gzticc.pincommon.base.BaseFragment;
+import com.gzticc.pincommon.ui.activity.CollapsingToolbarLayoutActivity;
 import com.gzticc.pincommon.ui.activity.GlideActivity;
 import com.gzticc.pincommon.ui.adapter.IndexLvAdapter;
 import com.gzticc.pincommon.utils.LogUtils;
@@ -49,7 +50,51 @@ public class IndexFragment extends BaseFragment implements AdapterView.OnItemCli
     protected void initData() {
         List<String> menuData = new ArrayList<>();
         menuData.add("glide");
-        menuData.add("2");
+        menuData.add("CollapsingToolbarLayout");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
+        menuData.add("3");
         menuData.add("3");
         indexLvAdapter = new IndexLvAdapter(menuData,mActivity);
         lvMenu.setAdapter(indexLvAdapter);
@@ -61,6 +106,10 @@ public class IndexFragment extends BaseFragment implements AdapterView.OnItemCli
             case 0:
 //                UIUtils.showToast("glide",0);
                 openActivity(GlideActivity.class);
+            break;
+            case 1:
+//                UIUtils.showToast("glide",0);
+                openActivity(CollapsingToolbarLayoutActivity .class);
             break;
             default:
                 break;

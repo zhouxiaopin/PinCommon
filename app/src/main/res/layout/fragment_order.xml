@@ -1,13 +1,41 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<cn.gzticc.baselibrary.ui.custom.view.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.gzticc.pincommon.ui.fragment.OrderFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="OrderFragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.youth.banner.Banner
+            android:id="@+id/banner1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+        <com.youth.banner.Banner
+            android:id="@+id/banner7"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100"/>
+    </LinearLayout>
 
-</FrameLayout>
+</cn.gzticc.baselibrary.ui.custom.view.MyScrollView>

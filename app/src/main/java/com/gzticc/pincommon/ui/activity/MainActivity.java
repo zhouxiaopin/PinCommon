@@ -153,6 +153,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         two.setIcon(UIUtils.getDrawable(R.drawable.tab_icon_select));
         three.setIcon(UIUtils.getDrawable(R.drawable.tab_icon_select));
         four.setIcon(UIUtils.getDrawable(R.drawable.tab_icon_select));
+
     }
 
     //渠道打包

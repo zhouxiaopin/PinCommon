@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".global.PinCommonApplication"
@@ -13,12 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--UMeng 配置-->
-        <meta-data android:name="UMENG_CHANNEL" android:value="${UMENG_CHANNEL_VALUE}"/>
+        <!-- UMeng 配置 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
 
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,15 +30,18 @@
             android:name=".RecyclerViewActivity1"
             android:label="@string/title_activity_recycler_view1"
             android:theme="@style/AppTheme.NoActionBar">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
 
         </activity>
-        <activity android:name=".ui.activity.GlideActivity"/>
-
+        <activity android:name=".ui.activity.GlideActivity" />
+        <activity android:name=".ui.activity.CollapsingToolbarLayoutActivity"></activity>
     </application>
 
 </manifest>
